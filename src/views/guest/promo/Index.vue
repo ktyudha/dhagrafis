@@ -71,7 +71,7 @@ function changePage(currentPage) {
   </div>
 
   <div class="px-[6vw] mb-[9rem]">
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
       <template v-for="gallery in promo" :key="gallery.id">
         <div>
           <img class="h-auto max-w-full rounded-lg" :src="gallery.image" alt="" />

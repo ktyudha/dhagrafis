@@ -2,6 +2,7 @@
 // import { RouterLink } from 'vue-router'
 import { onMounted, ref } from 'vue'
 import instance from '@/plugins/axios'
+import CustomCarousel from '@/components/guest/carousel/Index.vue'
 
 // fetching article
 const articles = ref([])
@@ -26,18 +27,19 @@ async function fetchArticles(url = '/') {
     <div class="bg-opacity-60"></div>
     <div class="hero-content text-neutral-content text-center">
       <div class="max-w-md">
-        <img src="/image/logo_dhagrafis_white.png" alt="" />
+        <img src="/image/logo_dhagrafis_white.png" alt="" class="lg:w-full w-4/5 mx-auto" />
       </div>
     </div>
   </div>
-
+  <custom-carousel :slides="articles.sliders" :slidesPerView="1" :scrollbar="false" />
+  <!-- 
   <div class="carousel w-full mb-[9rem]">
     <template v-for="slider in articles.sliders" :key="slider.id">
       <div id="item1" class="carousel-item w-full">
         <img :src="slider.image" class="w-full" />
       </div>
     </template>
-  </div>
+  </div> -->
 
   <div class="px-[6vw] mb-[9rem]">
     <div class="container-title d-flex">
@@ -70,63 +72,6 @@ async function fetchArticles(url = '/') {
       </template>
     </div>
   </div>
-
-  <!-- <div class="px-[6vw] mb-[9rem]">
-    <div class="container-title d-flex">
-      <img class="image-title" src="https://vindes.id/assets/img/Program.png" alt="" />
-    </div>
-
-    <div class="carousel carousel-center w-full lg:space-x-8 space-x-3 p-4">
-      <div class="carousel-item flex-col">
-        <img
-          src="https://vindesid.ap-south-1.linodeobjects.com/images/categories/SV-2022-09-09-03-59-57-4184a056486938e74cb2a183b3f22ed71c1e4565.jpg"
-          class="lg:w-[20vw] lg:h-[25vw] w-[40vw] h-[50vw]"
-        />
-        <h1 class="mt-4 text-2xl uppercase">Halo</h1>
-        <p class="mt-1 text-[#999]">60 Videos</p>
-      </div>
-      <div class="carousel-item flex-col">
-        <img
-          src="https://vindesid.ap-south-1.linodeobjects.com/images/categories/SV-2022-09-06-08-43-43-c11d78cbc41095ec2d06b12306d17ec1935bc8f5.png"
-          class="lg:w-[20vw] lg:h-[25vw] w-[40vw] h-[50vw]"
-        />
-        <h1 class="mt-4 text-2xl uppercase">Halo</h1>
-        <p class="mt-1 text-[#999]">60 Videos</p>
-      </div>
-      <div class="carousel-item flex-col">
-        <img
-          src="https://vindesid.ap-south-1.linodeobjects.com/images/categories/SV-2021-09-13-02-47-39-a507b64c7cd1ed4e4997a3d5f07314c9ff7c8f78.png"
-          class="lg:w-[20vw] lg:h-[25vw] w-[40vw] h-[50vw]"
-        />
-        <h1 class="mt-4 text-2xl uppercase">Halo</h1>
-        <p class="mt-1 text-[#999]">60 Videos</p>
-      </div>
-      <div class="carousel-item flex-col">
-        <img
-          src="https://vindesid.ap-south-1.linodeobjects.com/images/categories/SV-2022-02-24-13-03-04-5d0041d1352fb1e6e476e3d89b3003c9fb4282d5.jpg"
-          class="lg:w-[20vw] lg:h-[25vw] w-[40vw] h-[50vw]"
-        />
-        <h1 class="mt-4 text-2xl uppercase">Halo</h1>
-        <p class="mt-1 text-[#999]">60 Videos</p>
-      </div>
-      <div class="carousel-item flex-col">
-        <img
-          src="https://vindesid.ap-south-1.linodeobjects.com/images/categories/SV-2022-07-27-08-40-25-4e3cc97205af992dd08569e89342825fdf435c98.jpeg"
-          class="lg:w-[20vw] lg:h-[25vw] w-[40vw] h-[50vw]"
-        />
-        <h1 class="mt-4 text-2xl uppercase">Halo</h1>
-        <p class="mt-1 text-[#999]">60 Videos</p>
-      </div>
-      <div class="carousel-item flex-col">
-        <img
-          src="https://vindesid.ap-south-1.linodeobjects.com/images/categories/SV-2022-09-09-03-59-57-4184a056486938e74cb2a183b3f22ed71c1e4565.jpg"
-          class="lg:w-[20vw] lg:h-[25vw] w-[40vw] h-[50vw]"
-        />
-        <h1 class="mt-4 text-2xl uppercase">Halo</h1>
-        <p class="mt-1 text-[#999]">60 Videos</p>
-      </div>
-    </div>
-  </div> -->
 
   <div class="px-[6vw] mb-[9rem]">
     <div class="p-4 max-w-4xl mx-auto bg-black">
