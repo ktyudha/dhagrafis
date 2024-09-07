@@ -79,7 +79,7 @@ function changePage(currentPage) {
       </template>
     </div>
   </div>
-  <nav v-if="allPage.length >= 9">
+  <nav v-if="promo.length >= 9">
     <ul class="flex items-center justify-center gap-3 mb-20">
       <li v-for="page in allPage" :key="page">
         <button

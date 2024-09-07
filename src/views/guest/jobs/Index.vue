@@ -58,11 +58,11 @@ function changePage(currentPage) {
       </div>
     </div>
   </div>
-  <div class="max-w-4xl mx-auto mt-20 mb-10 lg:px-10 px-5" v-if="data.info">
+  <div class="max-w-4xl mx-auto mt-20 mb-10 lg:px-10 px-5">
     <div class="text-center">
       <h1 class="text-2xl text-center mx-auto font-semibold">
-        Yuk, abadikan momen berharga Anda dan dapatkan penawaran istimewa untuk kenangan yang tak
-        terlupakan!
+        Kami Menerima Jasa Fotografi, Videografi, Web development, Mobile (Android / iOS)
+        Application
       </h1>
     </div>
   </div>

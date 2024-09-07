@@ -53,7 +53,7 @@ watch(currentTheme, () => {
           to="/"
           class="flex items-center justify-between hover:bg-base-content/[.1] hover:outline-none px-4 gap-2 rounded-lg"
         >
-          <img class="w-10" src="/media/logo/pens.png" alt="Media PENS Logo" />
+          <!-- <img class="w-10" src="" alt="Media PENS Logo" /> -->
           Media PENS
         </RouterLink>
       </div>

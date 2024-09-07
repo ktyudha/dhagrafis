@@ -4,7 +4,7 @@ import { RouterLink } from 'vue-router'
 
 <template>
   <RouterLink to="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-    <img src="https://vindes.id/assets/img/logo-vindes.png" class="h-10" alt="Flowbite Logo" />
+    <img src="/image/logo_dhagrafis.svg" class="h-10" alt="Flowbite Logo" />
   </RouterLink>
   <button
     data-collapse-toggle="navbar-dropdown"

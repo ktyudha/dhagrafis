@@ -18,7 +18,7 @@
     </nav>
     <nav>
       <div class="grid grid-flow-col gap-10 mt-0">
-        <a>
+        <a href="https://www.twitter.com/" target="_blank">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -31,7 +31,7 @@
             ></path>
           </svg>
         </a>
-        <a>
+        <a href="https://www.youtube.com/@kurniawantry1051" target="_blank">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -44,7 +44,7 @@
             ></path>
           </svg>
         </a>
-        <a>
+        <a href="https://www.instagram.com/dhagrafis" target="_blank">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
