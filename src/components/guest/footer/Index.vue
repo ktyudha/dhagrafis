@@ -4,9 +4,7 @@
 <template>
   <footer class="footer footer-center text-base-content rounded p-10 gap-y-7" id="footer">
     <nav class="grid grid-flow-col lg:gap-4 gap-2">
-      <RouterLink to="/about" class="link link-hover font-bold tracking-widest"
-        >About Us</RouterLink
-      >
+      <RouterLink to="/about" class="link link-hover font-bold tracking-widest">About</RouterLink>
       <RouterLink to="/contact" class="link link-hover font-bold tracking-widest"
         >Contact</RouterLink
       >

@@ -11,7 +11,7 @@ onMounted(async () => {
   await fetchArticles()
 })
 
-async function fetchArticles(url = '/') {
+async function fetchArticles(url = '/home') {
   try {
     const response = await instance.get(url)
     articles.value = response.data.data
@@ -23,7 +23,10 @@ async function fetchArticles(url = '/') {
 </script>
 
 <template>
-  <div class="hero min-h-[60vh]" style="background-image: url('/image/bg_parallax.jpg')">
+  <div
+    class="hero md:min-h-[60vh] min-h-[90vh]"
+    style="background-image: url('/image/bg_parallax.jpg')"
+  >
     <div class="bg-opacity-60"></div>
     <div class="hero-content text-neutral-content text-center">
       <div class="max-w-md">
@@ -31,7 +34,16 @@ async function fetchArticles(url = '/') {
       </div>
     </div>
   </div>
-  <custom-carousel :slides="articles.sliders" :slidesPerView="1" :scrollbar="false" />
+  <custom-carousel
+    :slides="articles.sliders"
+    :slidesPerView="1"
+    :scrollbar="false"
+    :breakpoints="{
+      768: { slidesPerView: 1, pagination: false },
+      1024: { slidesPerView: 1 }
+    }"
+  />
+
   <!-- 
   <div class="carousel w-full mb-[9rem]">
     <template v-for="slider in articles.sliders" :key="slider.id">
@@ -41,15 +53,15 @@ async function fetchArticles(url = '/') {
     </template>
   </div> -->
 
-  <div class="px-[6vw] mb-[9rem]">
-    <div class="container-title d-flex">
+  <div class="px-[6vw] md:mb-[9rem] mb-[3rem]">
+    <div class="container-title md:mb-[27px] mb-0 d-flex">
       <img src="/image/katalog.svg" alt="" />
     </div>
 
     <div class="carousel carousel-center w-full lg:space-x-8 space-x-3 p-4">
       <template v-for="katalog in articles.keunggulan" :key="katalog.id">
         <div class="carousel-item flex-col">
-          <img :src="katalog.image.lg" class="lg:w-[20vw] lg:h-[25vw] w-[40vw] h-[50vw]" />
+          <img :src="katalog.image" class="lg:w-[20vw] lg:h-[25vw] w-[40vw] h-[50vw]" />
           <h1 class="mt-4 text-2xl uppercase">{{ katalog.title }}</h1>
           <!-- <p class="mt-1 text-[#999]">60 Videos</p> -->
         </div>
@@ -57,7 +69,10 @@ async function fetchArticles(url = '/') {
     </div>
   </div>
 
-  <div class="px-[6vw] mb-[9rem] pt-[3rem] lg:pb-[5rem] pb-[1rem]" id="bg-art-desktop">
+  <div
+    class="px-[6vw] md:mb-[9rem] mb-[3rem] md:pt-[3rem] lg:pb-[5rem] pb-[4rem]"
+    id="bg-art-desktop"
+  >
     <div class="container-title">
       <img src="/image/promo.svg" alt="" />
     </div>

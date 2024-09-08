@@ -37,7 +37,7 @@ import { RouterLink } from 'vue-router'
         <RouterLink
           to="/about"
           class="block uppercase py-2 px-3 text-white rounded hover:bg-[#ed0089] md:hover:bg-transparent md:border-0 md:hover:text-[#ed0089] md:p-0 dark:text-white md:dark:hover:text-[#ed0089] dark:hover:bg-[#ed0089] dark:hover:text-white md:dark:hover:bg-transparent"
-          >About Us</RouterLink
+          >About</RouterLink
         >
       </li>
       <li>
