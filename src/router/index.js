@@ -353,28 +353,32 @@ const routes = [
       },
       {
         path: '/register',
-        name: 'register',
-        component: () => import('@/views/auth/Register.vue'),
-        meta: {
-          pageTitle: 'Register'
-        }
-      },
-      {
-        path: '/verify-email/:id',
-        name: 'verification.notice',
-        component: () => import('@/views/auth/VerifyNotification.vue'),
-        meta: {
-          pageTitle: 'Verify Email'
-        }
-      },
-      {
-        path: '/verify-email/:id/:hash',
-        name: 'verification.verify',
-        component: () => import('@/views/auth/VerifyEmail.vue'),
-        meta: {
-          pageTitle: 'Verify Email'
-        }
+        redirect: '/login'
       }
+      // {
+      //   path: '/register',
+      //   name: 'register',
+      //   component: () => import('@/views/auth/Register.vue'),
+      //   meta: {
+      //     pageTitle: 'Register'
+      //   }
+      // },
+      // {
+      //   path: '/verify-email/:id',
+      //   name: 'verification.notice',
+      //   component: () => import('@/views/auth/VerifyNotification.vue'),
+      //   meta: {
+      //     pageTitle: 'Verify Email'
+      //   }
+      // },
+      // {
+      //   path: '/verify-email/:id/:hash',
+      //   name: 'verification.verify',
+      //   component: () => import('@/views/auth/VerifyEmail.vue'),
+      //   meta: {
+      //     pageTitle: 'Verify Email'
+      //   }
+      // }
     ]
   },
   {

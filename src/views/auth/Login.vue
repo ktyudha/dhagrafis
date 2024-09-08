@@ -7,8 +7,8 @@ import { useRouter } from 'vue-router'
 
 const isLoading = ref(false)
 const formData = ref({
-  email: 'superadmin@media.pens.ac.id',
-  password: 'password'
+  email: '',
+  password: ''
 })
 
 const authStore = useAuthStore()
@@ -83,7 +83,7 @@ const login = async (values, actions) => {
           <span v-else>Login</span>
         </button>
 
-        <div class="text-center mt-4">
+        <!-- <div class="text-center mt-4">
           Don't have an account yet?
           <RouterLink
             to="/register"
@@ -91,7 +91,7 @@ const login = async (values, actions) => {
           >
             Register
           </RouterLink>
-        </div>
+        </div> -->
       </Form>
     </div>
   </div>
