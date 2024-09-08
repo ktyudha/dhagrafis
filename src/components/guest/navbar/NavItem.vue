@@ -4,7 +4,7 @@ import { RouterLink } from 'vue-router'
 
 <template>
   <RouterLink to="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-    <img src="https://vindes.id/assets/img/logo-vindes.png" class="h-10" alt="Flowbite Logo" />
+    <img src="/image/logo_dhagrafis.svg" class="h-10" alt="Flowbite Logo" />
   </RouterLink>
   <button
     data-collapse-toggle="navbar-dropdown"
@@ -37,7 +37,7 @@ import { RouterLink } from 'vue-router'
         <RouterLink
           to="/about"
           class="block uppercase py-2 px-3 text-white rounded hover:bg-[#ed0089] md:hover:bg-transparent md:border-0 md:hover:text-[#ed0089] md:p-0 dark:text-white md:dark:hover:text-[#ed0089] dark:hover:bg-[#ed0089] dark:hover:text-white md:dark:hover:bg-transparent"
-          >About Us</RouterLink
+          >About</RouterLink
         >
       </li>
       <li>

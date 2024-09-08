@@ -4,14 +4,14 @@ import { onMounted, ref } from 'vue'
 
 const data = ref([])
 
-const promo = ref([])
-const meta = ref({})
-const allPage = ref({})
-const openPages = ref(1)
+// const promo = ref([])
+// const meta = ref({})
+// const allPage = ref({})
+// const openPages = ref(1)
 
 onMounted(async () => {
   await fetchInfo()
-  await fetchPromo()
+  // await fetchPromo()
 })
 
 async function fetchInfo(url = `/jobs`) {
@@ -26,22 +26,22 @@ async function fetchInfo(url = `/jobs`) {
   }
 }
 
-async function fetchPromo(url = `/gallery?page=${openPages.value}`) {
-  try {
-    const response = await instance.get(url)
-    promo.value = response.data.data
-    meta.value = response.data.meta
-    allPage.value = meta.value.links
-  } catch (error) {
-    console.error('Error fetching promo:', error)
-  }
-}
+// async function fetchPromo(url = `/gallery?page=${openPages.value}`) {
+//   try {
+//     const response = await instance.get(url)
+//     promo.value = response.data.data
+//     meta.value = response.data.meta
+//     allPage.value = meta.value.links
+//   } catch (error) {
+//     console.error('Error fetching promo:', error)
+//   }
+// }
 
-function changePage(currentPage) {
-  window.scrollTo({ top: 500, behavior: 'smooth' })
-  openPages.value = currentPage
-  fetchPromo()
-}
+// function changePage(currentPage) {
+//   window.scrollTo({ top: 500, behavior: 'smooth' })
+//   openPages.value = currentPage
+//   fetchPromo()
+// }
 </script>
 <template>
   <div
@@ -58,16 +58,17 @@ function changePage(currentPage) {
       </div>
     </div>
   </div>
-  <div class="max-w-4xl mx-auto mt-20 mb-10 lg:px-10 px-5" v-if="data.info">
+
+  <div class="max-w-4xl mx-auto mt-20 mb-10 lg:px-10 px-5 min-h-[20vh]">
     <div class="text-center">
       <h1 class="text-2xl text-center mx-auto font-semibold">
-        Yuk, abadikan momen berharga Anda dan dapatkan penawaran istimewa untuk kenangan yang tak
-        terlupakan!
+        Kami Menerima Jasa Fotografi, Videografi, Web development, Mobile (Android / iOS)
+        Application
       </h1>
     </div>
   </div>
 
-  <div class="px-[6vw] mb-[9rem]">
+  <!-- <div class="px-[6vw] mb-[9rem]">
     <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
       <template v-for="gallery in promo" :key="gallery.id">
         <div>
@@ -91,5 +92,5 @@ function changePage(currentPage) {
         </button>
       </li>
     </ul>
-  </nav>
+  </nav> -->
 </template>

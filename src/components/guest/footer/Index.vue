@@ -4,9 +4,7 @@
 <template>
   <footer class="footer footer-center text-base-content rounded p-10 gap-y-7" id="footer">
     <nav class="grid grid-flow-col lg:gap-4 gap-2">
-      <RouterLink to="/about" class="link link-hover font-bold tracking-widest"
-        >About Us</RouterLink
-      >
+      <RouterLink to="/about" class="link link-hover font-bold tracking-widest">About</RouterLink>
       <RouterLink to="/contact" class="link link-hover font-bold tracking-widest"
         >Contact</RouterLink
       >
@@ -18,7 +16,7 @@
     </nav>
     <nav>
       <div class="grid grid-flow-col gap-10 mt-0">
-        <a>
+        <a href="https://www.twitter.com/" target="_blank">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -31,7 +29,7 @@
             ></path>
           </svg>
         </a>
-        <a>
+        <a href="https://www.youtube.com/@kurniawantry1051" target="_blank">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -44,7 +42,7 @@
             ></path>
           </svg>
         </a>
-        <a>
+        <a href="https://www.instagram.com/dhagrafis" target="_blank">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"

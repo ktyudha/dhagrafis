@@ -37,7 +37,7 @@ function whatsappLink(number) {
 <template>
   <div
     v-if="about"
-    class="hero min-h-[50vh] w-full"
+    class="hero min-h-[50vh]"
     :style="{
       backgroundImage: `url(${about.image})`
     }"

@@ -38,12 +38,14 @@
 
 /* Section */
 .banner-middle {
-  background: url(https://aice.co.id/images/material/bg-text-orange.png) no-repeat center;
+  background: url(/image/banner-path.png) no-repeat center;
   display: inline-block;
   background-size: contain;
   font-weight: bold;
   padding: 15px 25px;
   text-transform: uppercase;
+  color: black;
+  font-size: 18px;
 }
 
 #bg-art-desktop {
@@ -76,4 +78,64 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: -6vh;
+}
+
+.preloader {
+  position: fixed;
+  background-color: #ed0089;
+  background-position: center center;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9991;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  text-align: center;
+}
+
+.preloader__image {
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-name: flipInY;
+  animation-name: flipInY;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100px auto;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: var(--swiper-navigation-top-offset, 50%);
+  width: 20% !important;
+  color: #ed0089 !important;
+}
+
+.swiper-pagination-bullet {
+  height: 13px !important;
+  width: 13px !important;
+  background-color: #ed0089;
+  border-radius: 10px !important;
+}
+.swiper-pagination-bullet-active {
+  opacity: var(--swiper-pagination-bullet-opacity, 1);
+  background: #ed0089 !important;
+  width: 32px !important;
+  height: 13px !important;
+  top: 0;
+  overflow: hidden;
+  background-color: #ed0089;
+  border-radius: 10px !important;
 }
